@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-inner">
+            <div class="header-logo">
+                <p class="logo">LOGO</p>
+            </div>
+            <nav class="navigation">
+                <ul class="nav-container">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Produkty ▾</a>
+                        <div class="dropdown">
+                            <a href="#">Lorem ipsum</a>
+                            <a href="#">Lorem ipsum</a>
+                            <a href="#">Lorem ipsum</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">O nás</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Akční nabídka</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-container">
+                <form class="search-box" action="#" method="GET">
+                    <input type="text" placeholder="Napište, co hledáte" name="query">
+                    <button type="submit"><img src="./assets/img/search.png"></button>
+                </form>
+            </div>
+            <div class="lang">
+                <div>
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">CZ ▾</a>
+                        <div class="dropdown">
+                            <a href="#">CZ</a>
+                            <a href="#">EN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart">
+                <p>Košík</p>
+                <p class="count">2</p>
+            </div>
+            <div class="login">
+                <a href="#"><img src="./assets/img/iconoir_profile-circled.png" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h3>Lorem ipsum dolor sit</h3>
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <button class="main-btn">Zobrazit</button>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories"></section>
+
+    <!-- Nabidka -->
+    <section class="nabidka" id="nabidka">
+        <h2>Vyberte si z naší nabídky</h2>
+        <div class="nabidka-inner" id="nabidka-inner">
+        </div>
+        <button class="nabidka-btn">Zobrazit více <img src="./assets/img/Group 43 (1).png" alt=""></button>
+    </section>
+
+    <!-- Produkty -->
+    <section id="product-container" class="product-container">
+        <div class="tabs">
+            <button class="tab" data-category="Novinky">Novinky</button>
+            <button class="tab" data-category="Nejprodávanější">Nejprodávanější</button>
+            <button class="tab" data-category="Doporučené">Doporučené</button>
+        </div>
+        <div id="product-list" class="product-list"></div>
+        <button class="main-btn showmore">Zobrazit více produktů</button>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog">
+        <h2>Vyberte si z naší nabídky</h2>
+        <div class="blog-inner" id="blog-container"></div>
+        <button class="blog-btn">Zobrazit více <img src="./assets/img/Group 43 (1).png" alt=""></button>
+    </section>
+
+    <!-- Info Icons -->
+    <section class="info-icons">
+        <div id="info-section" class="info-section"></div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <h2>Zůstaňtě s námi v kontaktu</h2>
+            <form>
+                <input type="email" placeholder="@Zadejte svůj email" required />
+                <button type="submit">
+                    Odeslat
+                    <img src="/assets/img/Group 43.png" alt="">
+
+                </button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <p class="logo">LOGO</p>
+        </div>
+        <div class="footer-inner">
+            <div id="gfooter" class="footer-content"></div>
+        </div>
+
+        <div class="copy">
+            <div>
+                <p>Copyright 2021 Constant Invest</p>
+            </div>
+            <div class="create">
+                <p>vytvořil Shoptet | </p> <img src="./assets/img/logo-m.png" alt="">
+                <p> MirandaMedia Group, s.r.o.</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+<script src="nabidkaBox.js"></script>
+<script src="products.js"></script>
+<script src="blog.js"></script>
+<script src="infoIcons.js"></script>
+<script src="footer.js"></script>
+<script src="categoryBoxes.js"></script>
+
+</html>
