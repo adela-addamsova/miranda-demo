@@ -1,0 +1,132 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body,
+button,
+input,
+li {
+    font-family: 'Montserrat';
+}
+
+p,
+a {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 500;
+    color: white;
+    margin: 72px 0 60px 0;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    margin: 20px 0 0 0;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+.main-btn {
+    color: black;
+    background-color: white;
+    padding: 20px 92px;
+    border: none;
+    font-weight: 500;
+}
+
+.main-btn:hover {
+    color: white;
+    background-color: black;
+}
+
+.header,
+.header-inner,
+.header-logo,
+.navigation,
+.nav-container,
+.cart,
+.search-box,
+.hero,
+.categories,
+.text-overlay,
+.offer-inner,
+.offer-box,
+.offer-text-overlay,
+.offer-btn,
+.product-container,
+.product-list,
+.product-card,
+.cart-box,
+.blog,
+.blog-inner,
+.newsletter-section,
+.footer-inner,
+.footer-content,
+.header-group,
+.offer-content,
+.product-container,
+.gold-btn-box,
+.gold-btn,
+.info-section,
+.newsletter-section form button,
+.footer-logo,
+.copy,
+.footer-content {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-inner,
+.categories,
+.offer-inner,
+.product-container,
+.blog-inner,
+.gold-btn-box,
+.info-section,
+.footer-inner,
+.copy,
+.footer-logo {
+    max-width: 1440px;
+    margin: auto;
+    width: 100%;
+}
+
+.gold-btn-box {
+    justify-content: end;
+    position: relative;
+    top: -60px;
+}
+
+.gold-btn {
+    z-index: 5;
+    height: 120px;
+    width: 243px;
+    background-color: #ECB235;
+    border: none;
+    gap: 12px;
+}

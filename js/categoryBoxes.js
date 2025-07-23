@@ -27,6 +27,7 @@ categoryBoxes.forEach(box => {
   boxDiv.innerHTML = `
     <div class="text-overlay">
       <h2>${box.title}</h2>
+      <button class="main-btn">Nakupuj</button>
     </div>
     
   `;

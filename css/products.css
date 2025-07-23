@@ -1,0 +1,102 @@
+.product-container {
+    flex-direction: column;
+}
+
+/* Inline menu */
+.tabs {
+    margin-bottom: 40px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-right: 5px;
+    background: white;
+    border: none;
+    font-size: 16px;
+    color: #979797;
+}
+
+.tab.active {
+    font-size: 24px;
+    color: black;
+}
+
+/* Products */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    border: 1px white solid;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: left;
+    flex-direction: column;
+    padding: 12px;
+    position: relative;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card:hover {
+    border: solid 1px #C4C4C4;
+    cursor: pointer;
+}
+
+.flags {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: flex-end;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.flag {
+    color: white;
+    padding: 2px 8px;
+    text-align: center;
+}
+
+.flag-novinka {
+    background-color: #63DA46;
+}
+
+.flag-vyprodej {
+    background-color: #F24D4D;
+}
+
+.flag-tip {
+    background-color: rgb(62, 148, 245);
+}
+
+.product-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.product-text .icon {
+    width: 24px;
+    height: auto;
+    padding: 0 24px;
+}
+
+.cart-box {
+    background-color: black;
+    cursor: pointer;
+}
+
+/* Showmore btn */
+.main-btn.showmore {
+    border: solid 1px black;
+    margin-bottom: 80px;
+}

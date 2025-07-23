@@ -49,20 +49,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const gfooter = document.getElementById('gfooter');
 
+    /* Footer columns */
     footerData.forEach(column => {
         const col = document.createElement('div');
         col.className = 'footer-column';
 
-        const heading = document.createElement('h4');
+        const heading = document.createElement('h5');
         heading.textContent = column.title;
         col.appendChild(heading);
 
+
+        /* Link lists */
         if (column.items) {
             const ul = document.createElement('ul');
             column.items.forEach(item => {
                 const li = document.createElement('li');
                 const a = document.createElement('a');
-                a.href = "#";  // You can replace with real links if you want
+                a.href = "#";
                 a.textContent = item;
                 li.appendChild(a);
                 ul.appendChild(li);
@@ -70,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col.appendChild(ul);
         }
 
+        /* Contact info */
         if (column.contact) {
             const contactDiv = document.createElement('div');
             contactDiv.className = 'contact-block';

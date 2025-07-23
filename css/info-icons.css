@@ -1,0 +1,27 @@
+.info-section {
+    padding: 144px 0;
+}
+
+.info-inner {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+}
+
+.info-text {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.info-icon {
+    width: 60px;
+}
+
+.info-row:not(:last-child) {
+    border-right: #C4C4C4 2px solid;
+}

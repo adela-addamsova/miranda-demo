@@ -1,0 +1,79 @@
+.offer-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.black-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background-color: black;
+    z-index: 1;
+}
+
+.offer-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-box {
+    width: 25%;
+    height: 610px;
+    align-items: end;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.offer-text-overlay {
+    text-align: left;
+    color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 24px;
+    margin-bottom: 112px;
+    z-index: 2;
+    gap: 12px;
+}
+
+.offer-text-overlay:hover {
+    cursor: pointer;
+}
+
+.offer-text-overlay p,
+.offer-text-overlay h3 {
+    font-weight: 500;
+    margin: 0;
+}
+
+.offer-box::before,
+.blog-post::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.offer-box:hover::before,
+.blog-post:hover::before {
+    background-color: #ECB235B2;
+    cursor: pointer;
+}
+
+.hover-arrow {
+    margin-top: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    width: 48px;
+    height: 16px;
+}
+
+.offer-box:hover .hover-arrow, .blog-post:hover .hover-arrow {
+    opacity: 1;
+}

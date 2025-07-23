@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/category.css">
+    <link rel="stylesheet" href="/css/offer.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/info-icons.css">
+    <link rel="stylesheet" href="/css/newsletter.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -14,7 +23,7 @@
 
 <body>
     <!-- Header -->
-    <div class="header">
+    <header class="header">
         <div class="header-inner">
             <div class="header-logo">
                 <p class="logo">LOGO</p>
@@ -22,7 +31,10 @@
             <nav class="navigation">
                 <ul class="nav-container">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Produkty ▾</a>
+                        <a href="#" class="nav-link">
+                            Produkty
+                            <img src="/assets/img/arrow-down.png" style="margin: 0 0 2px 4px">
+                        </a>
                         <div class="dropdown">
                             <a href="#">Lorem ipsum</a>
                             <a href="#">Lorem ipsum</a>
@@ -41,33 +53,37 @@
                     <button type="submit"><img src="./assets/img/search.png"></button>
                 </form>
             </div>
-            <div class="lang">
-                <div>
-                    <div class="nav-item">
-                        <a href="#" class="nav-link">CZ ▾</a>
-                        <div class="dropdown">
-                            <a href="#">CZ</a>
-                            <a href="#">EN</a>
+            <div class="header-group">
+                <div class="currency">
+                    <div>
+                        <div class="nav-item">
+                            <a href="#" class="currency-toggle" id="currency-toggle">
+                                CZK
+                                <img src="/assets/img/arrow-down.png" style="margin: 0 0 2px 4px">
+                            </a>
+                            <div class="dropdown" id="currency-dropdown">
+                                <a href="#" data-currency="CZK">CZK</a>
+                                <a href="#" data-currency="EUR">EUR</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="cart">
-                <p>Košík</p>
-                <p class="count">2</p>
-            </div>
-            <div class="login">
-                <a href="#"><img src="./assets/img/iconoir_profile-circled.png" alt=""></a>
+                <div class="cart">
+                    <p>Košík</p>
+                    <p class="count">2</p>
+                </div>
+                <div class="login">
+                    <a href="#"><img src="./assets/img/iconoir_profile-circled.png" alt=""></a>
+                </div>
             </div>
         </div>
-
-    </div>
+    </header>
 
     <!-- Hero section -->
     <section class="hero">
         <div class="hero-content">
-            <h3>Lorem ipsum dolor sit</h3>
-            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <h4>Lorem ipsum dolor sit</h4>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
             <button class="main-btn">Zobrazit</button>
         </div>
     </section>
@@ -75,18 +91,24 @@
     <!-- Categories -->
     <section class="categories" id="categories"></section>
 
-    <!-- Nabidka -->
-    <section class="nabidka" id="nabidka">
-        <h2>Vyberte si z naší nabídky</h2>
-        <div class="nabidka-inner" id="nabidka-inner">
-        </div>
-        <button class="nabidka-btn">Zobrazit více <img src="./assets/img/Group 43 (1).png" alt=""></button>
-    </section>
+    <!-- Offer -->
+    <div class="offer-container">
+        <div class="black-bg"></div>
+        <div class="offer-content">
+            <h3>Vyberte si z naší nabídky</h3>
+            <div class="offer-inner" id="offer-inner">
+            </div>
+            <div class="gold-btn-box">
+                <button class="gold-btn">Zobrazit více <img src="./assets/img/black-arrow.png" alt=""></button>
+            </div>
 
-    <!-- Produkty -->
+        </div>
+    </div>
+
+    <!-- Products -->
     <section id="product-container" class="product-container">
         <div class="tabs">
-            <button class="tab" data-category="Novinky">Novinky</button>
+            <button class="tab active" data-category="Novinky">Novinky</button>
             <button class="tab" data-category="Nejprodávanější">Nejprodávanější</button>
             <button class="tab" data-category="Doporučené">Doporučené</button>
         </div>
@@ -96,9 +118,11 @@
 
     <!-- Blog -->
     <section class="blog">
-        <h2>Vyberte si z naší nabídky</h2>
+        <h3>Přečtěte si z našeho blogu</h3>
         <div class="blog-inner" id="blog-container"></div>
-        <button class="blog-btn">Zobrazit více <img src="./assets/img/Group 43 (1).png" alt=""></button>
+        <div class="gold-btn-box">
+            <button class="gold-btn">Zobrazit více <img src="./assets/img/black-arrow.png" alt=""></button>
+        </div>
     </section>
 
     <!-- Info Icons -->
@@ -109,16 +133,14 @@
     <!-- Newsletter -->
     <section class="newsletter-section">
         <div class="newsletter-content">
-            <h2>Zůstaňtě s námi v kontaktu</h2>
+            <h3>Zůstaňtě s námi v kontaktu</h3>
             <form>
                 <input type="email" placeholder="@Zadejte svůj email" required />
                 <button type="submit">
                     Odeslat
-                    <img src="/assets/img/Group 43.png" alt="">
-
+                    <img src="/assets/img/white-arrow.png" alt="">
                 </button>
             </form>
-
         </div>
     </section>
 
@@ -135,7 +157,7 @@
             <div>
                 <p>Copyright 2021 Constant Invest</p>
             </div>
-            <div class="create">
+            <div class="created-by">
                 <p>vytvořil Shoptet | </p> <img src="./assets/img/logo-m.png" alt="">
                 <p> MirandaMedia Group, s.r.o.</p>
             </div>
@@ -145,11 +167,13 @@
 
 </body>
 
-<script src="nabidkaBox.js"></script>
-<script src="products.js"></script>
-<script src="blog.js"></script>
-<script src="infoIcons.js"></script>
-<script src="footer.js"></script>
-<script src="categoryBoxes.js"></script>
+<script src="./js/offer.js"></script>
+<script src="./js/header.js"></script>
+<script src="./js/toggleNav.js"></script>
+<script src="./js/products.js"></script>
+<script src="./js/blog.js"></script>
+<script src="./js/infoIcons.js"></script>
+<script src="./js/footer.js"></script>
+<script src="./js/categoryBoxes.js"></script>
 
 </html>

@@ -1,0 +1,65 @@
+.blog {
+    background: black;
+    width: 100%;
+    flex-direction: column;
+}
+
+.blog-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 336px;
+  width: 100%;
+}
+
+.blog-post {
+  color: white;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.wide-post {
+  grid-column: span 2;
+}
+
+.blog-text {
+    z-index: 5;
+    position: absolute;
+    text-align: left;
+    margin: 180px 0 0 40px;
+    gap: 20px;
+}
+
+.blog-text .arrow-hover-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.blog-text .hover-arrow {
+    margin: 24px 0 0 40px;
+}
+
+.blog-text:hover {
+    cursor: pointer;
+}
+
+.blog-text h3 {
+    margin: 8px 0;
+}
+
+.post-date p {
+    margin: 0;
+}
+
+.post-meta {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.post-author, .post-comments, .separator {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}

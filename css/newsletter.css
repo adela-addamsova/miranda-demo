@@ -1,0 +1,36 @@
+.newsletter-section {
+    height: 320px;
+    background-color: #ECB235;
+    padding-bottom: 80px;
+    background-image: url('../assets/img/news-bg.png');
+    background-repeat: no-repeat;
+    background-size: auto 120%;
+    background-position: 37% 105%;
+}
+
+.newsletter-section form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.newsletter-section form input {
+    height: 120px;
+    display: flex;
+    text-align: left;
+    width: 500px;
+    border: white;
+    padding-left: 40px;
+}
+
+.newsletter-section form button {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    flex-direction: row;
+}
+
+.newsletter-section form button img {
+    margin-left: 40px;
+    height: 16px;
+}

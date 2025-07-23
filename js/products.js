@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   let allProducts = [];
   let visibleCount = 4;
   let currentCategory = 'Novinky';
@@ -7,15 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.tab');
   const mainBtn = document.querySelector('.showmore');
 
-  // Load products JSON
-  fetch('./assets/src/products.json')
-    .then(res => res.json())
-    .then(data => {
-      allProducts = data;
-      renderProducts();
-    })
-    .catch(err => console.error('Chyba při načítání produktů:', err));
+  // Load products
+  try {
+    const res = await fetch('./assets/src/products.json');
+    const data = await res.json();
+    allProducts = data;
+    renderProducts();
+  } catch (err) {
+    console.error('Chyba při načítání produktů:', err);
+  }
 
+  // Render products
   function renderProducts() {
     productList.innerHTML = '';
 
@@ -26,10 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = createProductCard(product);
       productList.appendChild(card);
     });
-    
+
     mainBtn.style.display = (visibleCount >= filtered.length) ? 'none' : 'block';
   }
 
+  // Create product card
   function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card';
@@ -53,35 +56,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     card.innerHTML = `
       <img src="${product.imgSrc}" alt="${product.title}" />
-      <h3>${product.title}</h3>
+      <h4>${product.title}</h4>
       <div class="product-text">
-                <div>
-                    <p style="color: ${availabilityColor};">${product.availability}</p>
-                    <p>${product.price.toLocaleString('cs-CZ')} Kč</p>
-                </div>
-
-                <div class="cart-box">
-                    <img class="icon" src="./assets/img/shopping-cart.png" />
-                </div>
-
-            </div>
+        <div>
+          <p style="color: ${availabilityColor};">${product.availability}</p>
+          <p>${product.price.toLocaleString('cs-CZ')} Kč</p>
+        </div>
+        <div class="cart-box">
+          <img class="icon" src="./assets/img/shopping-cart.png" />
+        </div>
+      </div>
       <div class="flags">${flagsHTML}</div>
     `;
     return card;
   }
 
-  // Tabs click handler
+  // Active tabs
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
       currentCategory = tab.dataset.category;
-      visibleCount = 4; 
+      visibleCount = 4;
       renderProducts();
     });
   });
 
+  // Show more products
   mainBtn.addEventListener('click', () => {
     visibleCount += 4;
     renderProducts();
