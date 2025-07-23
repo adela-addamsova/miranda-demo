@@ -1,4 +1,3 @@
-// Offer box
 const offerBoxes = [
   {
     text: 'Investiční',
@@ -8,7 +7,7 @@ const offerBoxes = [
   {
     text: 'Investiční',
     title: 'Zlaté slitky',
-   image: './assets/img/nabidka2.png',
+    image: './assets/img/nabidka2.png',
   },
   {
     text: 'Historické',
@@ -24,7 +23,10 @@ const offerBoxes = [
 
 const containerOffer = document.getElementById('offer-inner');
 
-offerBoxes.forEach(box => {
+const isMobile = window.innerWidth < 768;
+const visibleBoxes = isMobile ? offerBoxes.slice(0, 2) : offerBoxes;
+
+visibleBoxes.forEach(box => {
   const offerBoxDiv = document.createElement('div');
   offerBoxDiv.className = 'offer-box';
   offerBoxDiv.style.backgroundImage = `url(${box.image})`;
@@ -37,7 +39,6 @@ offerBoxes.forEach(box => {
         <img src="../assets/img/white-arrow.png" alt="arrow" class="hover-arrow" />
       </div>
     </div>
-    
   `;
 
   containerOffer.appendChild(offerBoxDiv);

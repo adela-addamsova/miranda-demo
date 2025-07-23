@@ -23,3 +23,22 @@
     gap: 16%;
     margin-bottom: 32px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+        padding: 28px 0;
+        width: 90%;
+    }
+
+    .box {
+        flex: auto;
+        height: 200px;
+    }
+
+    .categories .text-overlay {
+        justify-content: center;
+        gap: 0;
+    }
+}

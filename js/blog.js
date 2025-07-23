@@ -66,9 +66,9 @@ blogPosts.forEach((post, index) => {
       <div class="post-meta">
         <div class="post-author">
           <img src="./assets/img/iconoir_profile-circled-1.png" alt="user icon" class="icon" />
-          ${post.author}
+          <p>${post.author}</p>
         </div> <div class="separator">| </div>
-        <div class="post-comments">${post.comments} comments</div>
+        <div class="post-comments"><p>${post.comments} comments</p></div>
       </div>
     </div>
   `;

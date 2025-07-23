@@ -24,3 +24,11 @@
 .hero .main-btn {
     margin-top: 40px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 90%;
+        margin: auto;
+    }
+}

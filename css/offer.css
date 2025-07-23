@@ -77,3 +77,23 @@
 .offer-box:hover .hover-arrow, .blog-post:hover .hover-arrow {
     opacity: 1;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+.black-bg {
+    position: absolute;
+    height: 60%;
+}
+    .offer-inner {
+        width: 90%;
+    }
+    .offer-box {
+    width: 50%;
+    height: 280px;
+}
+
+.offer-text-overlay {
+    margin-bottom: 40px;
+    margin-left: 8px;
+}
+}

@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: "Kontakt",
             contact: {
-
                 social: [
                     { icon: "fb.png", link: "#" },
                     { icon: "ig.png", link: "#" },
@@ -73,10 +72,21 @@ document.addEventListener('DOMContentLoaded', () => {
             col.appendChild(ul);
         }
 
-        /* Contact info */
+        /* Contact*/
         if (column.contact) {
             const contactDiv = document.createElement('div');
             contactDiv.className = 'contact-block';
+
+            const socialDiv = document.createElement('div');
+            socialDiv.className = 'social-icons';
+            column.contact.social.forEach(s => {
+                const a = document.createElement('a');
+                a.href = s.link;
+                a.innerHTML = `<img src="./assets/img/${s.icon}" alt="social icon">`;
+                socialDiv.appendChild(a);
+            });
+
+            contactDiv.appendChild(socialDiv);
 
             const phone = document.createElement('div');
             phone.className = 'contact-phone';
@@ -88,17 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
             email.innerHTML = `<img src="./assets/img/mail.png"> <a href="mailto:${column.contact.email}">${column.contact.email}</a>`;
             contactDiv.appendChild(email);
 
-            const socialDiv = document.createElement('div');
-            socialDiv.className = 'social-icons';
-
-            column.contact.social.forEach(s => {
-                const a = document.createElement('a');
-                a.href = s.link;
-                a.innerHTML = `<img src="./assets/img/${s.icon}" alt="social icon">`;
-                socialDiv.appendChild(a);
-            });
-
-            contactDiv.appendChild(socialDiv);
             col.appendChild(contactDiv);
         }
 

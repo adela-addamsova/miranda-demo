@@ -9,6 +9,7 @@
 .header-inner {
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 16px;
 }
 
 .logo {
@@ -91,6 +92,10 @@
     position: relative;
 }
 
+.currency a {
+    color: black;
+}
+
 .currency .dropdown {
     min-width: 80px;
     padding-top: 16px;
@@ -111,4 +116,92 @@
     border: 1px solid;
     border-radius: 50%;
     padding: 4px 8px;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 80vh;
+    background: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    z-index: 10;
+    padding: 20px;
+}
+
+.mobile-menu-inner {
+    width: 100%;
+    max-width: 420px;
+}
+
+.mobile-nav {
+    text-align: left;
+}
+
+.mobile-menu.open {
+    right: 0;
+    padding-top: 60px;
+}
+
+.mobile-menu ul {
+    padding: 0;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.mobile-additional {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 20px;
+    gap: 20px;
+}
+
+.search-container-mobile {
+    display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 1280px) {
+    .header {
+        height: 72px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    nav.navigation,
+    .header-group .currency,
+    .header-group .login,
+    .search-container {
+        display: none;
+    }
+
+    header .logo {
+        padding: 12px 28px;
+    }
+
+    .currency a {
+        text-decoration: none;
+        color: #8E8E8E;
+        padding-right: 4px;
+    }
+
+    .currency a.active {
+        color: black;
+    }
+
+    .search-container-mobile {
+        display: flex;
+        width: 100%;
+        margin: 40px 0 0 12px;
+    }
 }

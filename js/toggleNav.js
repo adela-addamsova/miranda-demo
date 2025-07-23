@@ -1,19 +1,26 @@
-const toggle = document.getElementById('currency-toggle');
-const dropdown = document.getElementById('currency-dropdown');
-const navItem = toggle.closest('.nav-item');
+function setupCurrencyToggle(toggleId, dropdownId) {
+  const toggle = document.getElementById(toggleId);
+  const dropdown = document.getElementById(dropdownId);
+  if (!toggle || !dropdown) return;
 
-// Toggle dropdown
-toggle.addEventListener('click', (e) => {
-  e.preventDefault();
-  navItem.classList.toggle('open');
-});
+  const navItem = toggle.closest('.nav-item') || toggle.parentElement;
 
-// Change currency on selection
-dropdown.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', (e) => {
+  // Toggle dropdown
+  toggle.addEventListener('click', (e) => {
     e.preventDefault();
-    const newCurrency = link.getAttribute('data-currency');
-    toggle.innerText = `${newCurrency} ▾`;
-    navItem.classList.remove('open');
+    navItem.classList.toggle('open');
   });
-});
+
+  // Change currency on selection
+  dropdown.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const newCurrency = link.getAttribute('data-currency');
+      toggle.innerText = `${newCurrency} ▾`;
+      navItem.classList.remove('open');
+    });
+  });
+}
+
+setupCurrencyToggle('currency-toggle', 'currency-dropdown');
+setupCurrencyToggle('currency-toggle-mobile', 'currency-dropdown-mobile');

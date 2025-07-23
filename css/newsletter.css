@@ -34,3 +34,25 @@
     margin-left: 40px;
     height: 16px;
 }
+
+@media (max-width: 768px) {
+    .newsletter-section form {
+        gap: 0;
+    }
+
+    .newsletter-section form input {
+        height: 52px;
+        width: 220px;
+        padding-left: 12px;
+    }
+
+    .newsletter-section form button {
+        height: 52px;
+        padding: 20px;
+    }
+
+    .newsletter-section form button img {
+        margin-left: 12px; 
+        height: 6px;
+    }
+}
